@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Space Grotesk', 'Noto Sans Ethiopic', sans-serif;
+  --font-ethiopic: 'Noto Sans Ethiopic', 'Space Grotesk', sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-space-bg: #0B0C10;
+  --color-accent-brass: #C9A45C;
+  --color-accent-teal: #6FB3C2;
+  --color-text-primary: #ECEDEF;
+  --color-text-muted: #9096A2;
+}
+
+@keyframes hudFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hudFadeInOpacityOnly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-hud-fade-in {
+  animation: hudFadeIn 400ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-wordmark-fade-in {
+  animation: hudFadeIn 500ms cubic-bezier(0.16, 1, 0.3, 1) 400ms both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hud-fade-in {
+    animation: hudFadeInOpacityOnly 250ms linear both;
+  }
+  .animate-wordmark-fade-in {
+    animation: hudFadeInOpacityOnly 250ms linear 400ms both;
+  }
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0B0C10;
+  color: #ECEDEF;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+}

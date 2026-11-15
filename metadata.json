@@ -1,0 +1,6 @@
+{
+  "name": "ድንቅነሽ (Lucy) Space Museum",
+  "description": "Abandoned but not Forgotten: Interactive 3D museum storytelling about NASA's discarded equipment on the Moon and Mars.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
